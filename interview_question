@@ -1,0 +1,65 @@
+#/bin/bash and #/bin/sh diff
+
+
+ps -ef | grep amazon | awk -F" " '{print $2}'
+
+
+wget VS curl
+
+awk
+
+-----------------------------------------
+1 . command to list all the process 
+ps -ef
+
+2. awk is used to filter the specific line/column of o/p
+
+ps -ef | awk F "" '{print $2}
+
+3. write a script to print only error from a remote log
+
+curl google.com | grep Trace
+
+4. print a num which is divisible by a and b but not ab
+
+for i in {1..100}; do
+if ([`expr $i %a` == 0] || [`expr $i%b` == 0]) &&[`expr $i%a*b` != 0];
+then 	
+	echo $i
+fi;
+done
+
+5. Find the word count in mississipi
+
+#!/bin/bash
+
+x=mississipi
+
+grep -o "s" <<< ""$x" | wc -l
+
+6. how to debug shell script?
+
+set -x
+
+7. what is crontab in Linux? example
+
+8.open a file in read-only
+
+vim -r test.txt
+
+9. soft Vs hard link
+
+10 . diff break and continue
+
+11. types of loops and its usecase
+
+12 is bash dynamic or statically typed and why?
+13. Explain about a n/w troubleshooting utility?
+traceroute
+
+14. how will you sort list of names in a file
+
+15. How will you manage logs of a system that generate huge log files
+everyday?
+
+logrotate(gzip, zip)
