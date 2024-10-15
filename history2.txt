@@ -1,0 +1,171 @@
+    1  clear
+    2  touch fst_shell_script.sh
+    3  man ls
+    4  sudo nano fst_shell_script.sh  
+    5  sudo nano dnf.log
+    6  grep "error" dnf.log
+    7  grep -v "error" dnf.log
+    8  history
+    9  grep -i "error" dnf.log
+   10  grep -i -c "error" dnf.log
+   11  pwd
+   12  #List "/etc" directory files and directories ?
+   13  ls
+   14  ls /etc
+   15  #List ".conf" files only under "/etc" directory ?
+   16  ls -l /etc/*conf
+   17  history
+   18  #Print total number of ".conf" files only under "/etc" directory ?
+   19  ls -l /etc/*conf | wc -l
+   20  history > cmds.txt
+   21  ls
+   22  cat cmds.txt  
+   23  #Create an empty directory with name "autopilot" under "/tmp" directory?
+   24  mkdir /tmp/autopilot
+   25  #Create an empty file with name "devops.txt" under "/tmp/autopilot/" directory ?
+   26  touch /tmp/autopilot/devops.txt
+   27  #Change (Switch) your directory to "/tmp/autopilot/" ?
+   28  cd /tmp/autopilot/
+   29  #Switch your directory to /tmp/autopilot and then print "Hello Devops" into the "devops.txt" file in the "/tmp/autopilot" directory ?
+   30  cd
+   31  cd /tmp/autopilot/; echo "hello devops" > devops.txt
+   32  ls
+   33  cd 
+   34  #Display the content of "/tmp/autopilot/devops.txt" file on screen
+   35  cat /tmp/autopilot/devops.txt
+   36  #Switch your directory to /tmp/autopilot then Create a copy of "devops.txt" file and name the copy as "pilot.txt" ?
+   37  cd /tmp/autopilot ; cp devops.txt pilot.txt
+   38  ls
+   39  cd .
+   40  cd 
+   41  #Move "/tmp/autopilot/pilot.txt" file to "/etc" directory 
+   42  mv /tmp/autopilot/pilot.txt /etc/
+   43  chmod 777 /etc
+   44  #Delete the file "/etc/pilot.txt" ?
+   45  rm /etc/pilot.txt
+   46  #Create an empty file "devops.txt" under "/tmp/autopilot" directory and then remove the file "/tmp/autopilot/devops.txt" forcefully with "rm" command ?
+   47  rm -f /tmp/autopilot/devops.txt
+   48  #Switch your directory to "/etc" and then display top 10 rows of "group" file ?
+   49  cd /etc/
+   50  head group
+   51  #Switch your directory to "/etc" and then display top 5 rows of group file ?
+   52  head -5 group
+   53  #Switch your directory to "/etc" and then display last 10 rows of "group" file ?
+   54  tail group
+   55  #Switch your directory to "/etc" and then display last 2 rows of "group" file ?
+   56  tail -2 group
+   57  #Print the current date and time on screen ?
+   58  date
+   59  #Print current date in the format "DD/MM/YYYY" ?
+   60  #Print current time in the format "HH:SS" ?
+   61  date +'%H:%M'
+   62  #Display current month calendar on screen ?
+   63  cal
+   64  #Display the hostname of your current server ?
+   65  hostname
+   66  #Display the current logged in username ?
+   67  whoami
+   68  #Ping "udemy.com" from your terminal ?
+   69  ping -c5 udemy.com
+   70  #Print recently triggered commands on your Linux system ?
+   71  history
+   72  history>history.txt
+   73  cd 
+   74  history>history.txt
+   75  ls
+   76  cat history.txt  
+   77  #Query the Domain Name System for "Udemy.com" ?
+   78  dig Udemy.com
+   79  #Identify the location of executable "bash" ?
+   80  which bash
+   81  #List all running processes with full format listing for each process
+   82  ps -ef
+   83  #Display what programs are currently running on the system and how much system resources they are utilizing ?
+   84  top
+   85  #Which command is used to download/upload data to a server with supported protocols such as HTTP, FTP, SFTP, IMAP, POP3, etc ?
+   86  #Retrieves content from web "udemy.com" into index.html file ?
+   87  #Search "Git" package for Linux machine ?
+   88  #Print information about your Linux system like the machine name, operating system ?
+   89  uname -a
+   90  #Display the status of TCP and UDP endpoints, routing table info., and interface information ?
+   91  netstat
+   92  history>history.txt
+   93  ls
+   94  mkdir shell_scripting
+   95  ls
+   96  mv history.txt  /shell_scripting
+   97  chmod 777 history.txt  
+   98  mv history.txt  /shell_scripting
+   99  chmod 777 /shell_history 
+  100  chmod 777 shell_history 
+  101  ls
+  102  git init
+  103  echo "# shell_scripting_exercise" >> README.md
+  104  git init
+  105  git commit -m "first commit"
+  106  ls
+  107  mv history.txt  shell_scripting/ 
+  108  ls
+  109  cd she
+  110  cd shell_scripting/ 
+  111  clear
+  112  ls
+  113  git init
+  114  git add .
+  115  git branch -M master
+  116  git remote add origin https://github.com/shubham1507/shell_scripting_exercise.git
+  117  git push -u origin master
+  118  ls
+  119  git branch -M master
+  120  git remote add origin https://github.com/shubham1507/shell_scripting_exercise.git
+  121  git push -u origin master
+  122  git push origin master
+  123  ls -ltr
+  124  ls -la
+  125  sudo rm -rf .git
+  126  ls
+  127  git init
+  128  git status
+  129  git add .
+  130  git commit -m "first commit"
+  131  git branch -M master
+  132  git remote add origin https://github.com/shubham1507/shell_scripting_exercise.git
+  133  git push -u origin master
+  134  ls
+  135  clear
+  136  ls
+  137  #Display the disk space used in the file system ?
+  138  df
+  139  #Display the disk space used in the Human-Readable format (eg: in MB/GB) ?
+  140  df -h
+  141  #Print the network interface configuration information on screen ?
+  142  ifconfig
+  143  #Display details about block devices on your linux machine ?
+  144  lsblk
+  145  #Print the message buffer of the kernel on your linux OS ?
+  146  dmesg
+  147  #Create a new User name as "devops" on linux ?
+  148  adduser devops
+  149  sudo adduser devops
+  150  #Delete the User "devops" from your machine ?
+  151  sudo userdel devops
+  152  #Install a new package "httpd" on your machine ?
+  153  sudo apt install httpd
+  154  #Remove package "httpd" form your machine ?
+  155  yum remove httpd
+  156  #Put your terminal on sleep for 30 Seconds ?
+  157  sleep 30
+  158  #List all the files under "/etc" directory which are modified in last 30 days ?
+  159  find /etc -iname "*" -type f -mtime -30
+  160  #Grep "root" keyword from "/var/log/dnf.log" file ?
+  161  grep "root" /var/log/dnf.log
+  162  #Print the count (# of times, root keyword found) by performing grep "root" keyword from "/var/log/dnf.log" file ?
+  163  grep -c "root" /var/log/dnf.log
+  164  #Create an empty file "devops.txt"
+  165  # echo "Test" > devops.txt
+  166  sed -i "s/Test/Hello/" devops.txt
+  167  #Print Second Column of top 100 rows from '/var/log/dnf.log' file
+  168  awk '{print $2}' /var/log/dnf.log | head -100
+  169  #Print second and third column from '/var/log/dnf.log' file , print only for top 50 rows ?
+  170  awk '{print $2,$3}' /var/log/dnf.log | head -50
+  171  history > history2.txt
